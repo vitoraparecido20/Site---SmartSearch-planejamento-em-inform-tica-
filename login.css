@@ -1,0 +1,171 @@
+/* ===== ÁREA DE LOGIN ===== */
+#login {
+  background-color: #0077b6;
+  color: #000;
+  padding-bottom: 30px;
+}
+
+#form-login {
+  border-radius: 2%;
+  padding: 20px;
+  background-color: #eadbdb;
+  max-width: 250px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#form-login label {
+  font-weight: bold;
+}
+
+#form-login input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#form-login button {
+  background-color: #000;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#form-login button:hover {
+  background-color: #2b9348;
+}
+
+/* ===== MENSAGEM DE LOGIN ===== */
+#mensagem-login {
+  display: none; /* aparece só quando o JS exibe */
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 12px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #2b9348; /* verde padrão para sucesso */
+  transition: all 0.3s ease;
+}
+
+#mensagem-login.erro {
+  background-color: #d90429; /* vermelho para erro */
+}
+
+#mensagem-login.sucesso {
+  background-color: #2b9348; /* verde para sucesso */
+}
+
+/* ===== LINK DE CADASTRO ===== */
+#criar-conta {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#link-cadastro {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#link-cadastro:hover {
+  text-decoration: underline;
+}
+
+/* ===== ÁREA DE CADASTRO ===== */
+#cadastro {
+  background-color: #0077b6;
+  color: #000;
+  padding-bottom: 30px;
+}
+
+#form-cadastro {
+  border-radius: 2%;
+  padding: 20px;
+  background-color: #eadbdb;
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#form-cadastro label {
+  font-weight: bold;
+}
+
+#form-cadastro input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#form-cadastro button {
+  background-color: #000;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#form-cadastro button:hover {
+  background-color: #2b9348;
+}
+
+/* ===== MENSAGEM DE CADASTRO ===== */
+#mensagem-cadastro {
+  display: none; /* aparece só quando o JS exibe */
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 12px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #2b9348;
+  transition: all 0.3s ease;
+}
+
+#mensagem-cadastro.erro {
+  background-color: #d90429;
+}
+
+#mensagem-cadastro.sucesso {
+  background-color: #2b9348;
+}
+
+/* ===== LINK VOLTAR AO LOGIN ===== */
+#voltar-login {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#voltar-login a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#voltar-login a:hover {
+  text-decoration: underline;
+}
+
+/* ===== VISIBILIDADE DAS SEÇÕES ===== */
+.content-section {
+  display: none;
+}
+.content-section.active {
+  display: block;
+}

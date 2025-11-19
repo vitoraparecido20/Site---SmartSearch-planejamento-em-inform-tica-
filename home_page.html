@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSearch</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="home_page.css">
+    <link rel="stylesheet" href="sobre_nos.css">
+    <link rel="stylesheet" href="contato.css">  
+    <link rel="stylesheet" href="desaparecidos.css">
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="icon" type="image/png" href="SmartSearchLogo.png">
+</head>
+
+<body>
+
+<header>
+    <div id="logo">
+        <img src="SmartSearchLogo.png" alt="Logo do SmartSearch">
+    </div>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#" data-section="home">Home</a></li>
+            <li><a href="#" data-section="sobre">Sobre</a></li>
+            <li><a href="#" data-section="desaparecidos">Desaparecidos</a></li>
+            <li><a href="#" data-section="contato">Contato</a></li>
+
+            <!-- Botão Login para quem não está logado -->
+            <li id="item-login"><a href="#" data-section="login">Login</a></li>
+
+            <!-- Mini perfil (somente para logados) -->
+            <li id="mini-perfil" style="display:none;">
+                <img id="avatar-perfil" src="default-avatar.png" alt="Perfil" />
+                <div id="menu-perfil" class="menu-perfil">
+                    <button id="btn-perfil">👤 Perfil</button>
+                    <button id="btn-logout">🚪 Logout</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ========================= HOME ========================= -->
+<section id="home" class="content-section active">
+    <div id="banner">
+        <div class="banner-text">
+            <h1>Ajudando famílias a reencontrarem quem amam</h1>
+            <p>Encontre, compartilhe e ajude a trazer esperança.</p>
+
+            <div class="buttons">
+                <a href="#" class="btn">🔍 Procurar pessoa</a>
+                <a href="#" class="btn secondary">📢 Registrar desaparecimento</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="desaparecidos-home">
+        <h2>🕵️‍♀️ Últimos registros</h2>
+        <div class="title-separator"></div>
+
+        <button id="btn-meus-registros" class="btn small" style="background:#000;color:#fff;">
+            Meus registros
+        </button>
+        <button id="btn-todos-registros" class="btn small" style="background:#555;color:#fff;">
+            Todos os registros
+        </button>
+
+        <div class="cards">
+            <div class="card">
+                <img src="edgar.jpg" alt="Foto de Edgar Tomé">
+                <h3>Edgar Tomé</h3>
+                <p>Idade: 33 anos</p>
+                <p>Visto por último: São Mateus - SP</p>
+                <p>Status: <span class="status missing">Desaparecido</span></p>
+            </div>
+
+            <div class="card">
+                <img src="idosa.jpg" alt="Foto de Maria Souza">
+                <h3>Maria Souza</h3>
+                <p>Idade: 73 anos</p>
+                <p>Visto por último: Belo Horizonte - MG</p>
+                <p>Status: <span class="status missing">Desaparecido</span></p>
+            </div>
+
+            <div class="card">
+                <img src="carlos.jpg" alt="Foto de Carlos Lima">
+                <h3>Carlos Lima</h3>
+                <p>Idade: 23 anos</p>
+                <p>Visto por último: Recife - PE</p>
+                <p>Status: <span class="status found">Encontrado</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================= SOBRE ========================= -->
+<section id="sobre" class="content-section">
+    <div class="sobre-banner">
+        <h1>Sobre Nós</h1>
+        <p>Conheça o SmartSearch, uma plataforma dedicada a trazer esperança para famílias em busca de entes queridos desaparecidos.</p>
+    </div>
+
+    <div class="sobre-cards">
+        <div class="card">
+            <h2>Quem Somos</h2>
+            <p>Uma plataforma voltada à busca de desaparecidos no Brasil, com segurança e confiabilidade.</p>
+        </div>
+
+        <div class="card">
+            <h2>Missão</h2>
+            <p>Oferecer uma ferramenta ágil, segura e acessível para conectar informações importantes.</p>
+        </div>
+
+        <div class="card">
+            <h2>Visão</h2>
+            <p>Ser referência nacional em soluções tecnológicas de apoio à localização de pessoas.</p>
+        </div>
+
+        <div class="card">
+            <h2>Valores</h2>
+            <p>Segurança, transparência, empatia e comprometimento.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ========================= DESAPARECIDOS ========================= -->
+<section id="desaparecidos" class="content-section">
+    <h2>🕵️‍♀️ Todos os registros</h2>
+    <div class="title-separator"></div>
+
+    <div class="filtros">
+        <input type="text" id="buscar-nome" placeholder="Buscar por nome">
+
+        <select id="filtro-estado">
+            <option value="">Todos os estados</option>
+            <!-- Lista completa dos estados -->
+            <option value="AC">Acre</option> 
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+        </select>
+
+        <select id="filtro-status">
+            <option value="">Todos os status</option>
+            <option value="missing">Desaparecido</option>
+            <option value="found">Encontrado</option>
+        </select>
+
+        <button id="btn-filtrar">Filtrar</button>
+    </div>
+
+    <div class="cards" id="cards-desaparecidos"></div>
+
+    <!-- Formulário (aparece apenas para usuários logados) -->
+    <form id="form-desaparecido">
+        <input type="text" id="nome-desaparecido" placeholder="Nome" required>
+        <input type="number" id="idade-desaparecido" placeholder="Idade" required>
+        <input type="text" id="cidade-desaparecido" placeholder="Cidade" required>
+        <input type="text" id="estado-desaparecido" placeholder="Estado" required>
+        <input type="date" id="data-desaparecimento" required>
+        <textarea id="detalhes-desaparecimento" placeholder="Detalhes"></textarea>
+        <label for="foto-desaparecido" id="label-foto" class="btn small" style="cursor:pointer;">
+             📸 Escolher foto
+        </label>
+
+<input type="file" id="foto-desaparecido" accept="image/*" style="display:none;">
+        <button type="submit">Registrar</button>
+    </form>
+
+    <div id="mensagem-registro"></div>
+
+    <p id="msg-login-registro" style="display:none;text-align:center;color:#fff;font-weight:bold;">
+        Faça login ou cadastre-se para registrar um desaparecimento.
+    </p>
+</section>
+
+<!-- ========================= CONTATO ========================= -->
+<section id="contato" class="content-section">
+    <h1>Contato</h1>
+
+    <form id="form-contato">
+        <input type="text" id="nome-contato" placeholder="Seu nome" required>
+        <input type="email" id="email-contato" placeholder="Seu email" required>
+        <textarea id="mensagem-contato" placeholder="Escreva sua mensagem" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div id="mensagem-sucesso-contato" style="display:none;">Mensagem enviada com sucesso!</div>
+</section>
+
+<!-- ========================= LOGIN ========================= -->
+<section id="login" class="content-section">
+    <h1>Login</h1>
+
+    <form id="form-login">
+        <input type="email" id="email-login" placeholder="Digite seu email" required>
+        <input type="password" id="senha-login" placeholder="Digite sua senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+
+    <p id="criar-conta">
+        Não tem conta? <a href="#" id="link-cadastro">Cadastre-se</a>
+    </p>
+
+    <div id="mensagem-login"></div>
+</section>
+
+<!-- ========================= CADASTRO ========================= -->
+<section id="cadastro" class="content-section">
+    <h1>Cadastro</h1>
+
+    <form id="form-cadastro">
+        <input type="text" id="nome-cadastro" placeholder="Digite seu nome completo" required>
+        <input type="email" id="email-cadastro" placeholder="Digite seu email" required>
+        <input type="password" id="senha-cadastro" placeholder="Crie uma senha" required>
+        <input type="password" id="confirmar-senha" placeholder="Confirme sua senha" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <p id="voltar-login">
+        Já tem conta? <a href="#" id="link-login">Voltar ao login</a>
+    </p>
+
+    <div id="mensagem-cadastro"></div>
+</section>
+
+<!-- ========================= PERFIL ========================= -->
+<section id="perfil" class="content-section">
+    <h1>👤 Meu Perfil</h1>
+
+    <div class="perfil-container">
+        <div class="foto-container">
+            <img id="foto-perfil" src="default-avatar.png" alt="Foto de perfil">
+            <label for="input-foto" id="btn-alterar-foto">📷</label>
+            <input type="file" id="input-foto" accept="image/*" style="display:none;">
+        </div>
+
+        <div class="perfil-info">
+            <p><strong>Nome:</strong> <span id="perfil-nome"></span></p>
+            <p><strong>Email:</strong> <span id="perfil-email"></span></p>
+            <p><strong>Telefone:</strong> <span id="perfil-telefone">—</span></p>
+            <p><strong>Região:</strong> <span id="perfil-regiao">—</span></p>
+
+            <button id="btn-editar-perfil">Editar informações</button>
+
+            <form id="form-editar-perfil" style="display:none;margin-top:15px;">
+                <input type="tel" id="editar-telefone" placeholder="(00) 00000-0000">
+                <input type="text" id="editar-regiao" placeholder="Cidade - Estado">
+
+                <div style="display:flex;gap:10px;">
+                    <button type="submit">Salvar</button>
+                    <button type="button" id="btn-cancelar-edicao">Cancelar</button>
+                </div>
+            </form>
+
+            <p id="mensagem-perfil" style="display:none;margin-top:10px;font-weight:bold;"></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 SmartSearch — Cada clique pode mudar uma vida.</p>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="home.js"></script>
+<script src="contato.js"></script>
+
+</body>
+</html>

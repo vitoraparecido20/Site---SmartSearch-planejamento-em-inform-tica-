@@ -1,0 +1,470 @@
+/* Zera margens padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0077b6;
+  color: #333;
+}
+
+/* Logo */
+
+body #logo{
+  background-color: #eadbdb;
+  position: relative;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+#logo img {
+  width: 150px;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Navbar */
+#navbar {
+  background-color: #000;
+  padding: 12px 0;
+  width: 100%;
+}
+
+/* Correção de alinhamento da Navbar */
+#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ✅ Centraliza verticalmente */
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar li {
+  display: flex;
+  align-items: center; /* ✅ Garante alinhamento mesmo com botões diferentes */
+}
+
+#navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center; /* ✅ Mantém o texto centralizado verticalmente */
+}
+
+#navbar a:hover {
+  background-color: #0077b6;
+}
+
+/* Mini perfil na navbar */
+#mini-perfil {
+  display: none;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* ✅ Centraliza verticalmente */
+  gap: 10px;
+  background-color: #000;
+  padding: 8px 15px;
+  border-radius: 6px;
+  position: relative;
+  top: 0; /* evita deslocamento vertical */
+}
+
+#mini-perfil p {
+  margin: 0;
+  line-height: 1;
+}
+
+#mini-perfil button {
+  text-align: left;
+  background-color: #ffffff;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#mini-perfil button:hover {
+  background-color: #0077b6;
+  color: #000;
+}
+
+
+/* Banner principal */
+#banner {
+  background: url('banner.jpg') center/cover no-repeat;
+  text-align: center;
+  color: white;
+  padding: 100px 20px;
+  background-color: #0077b6; /* fallback se a imagem não carregar */
+}
+
+#banner h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#banner p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  background-color: #000;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.btn.secondary {
+  background-color: #000;
+  color: #ffffff;
+}
+
+.btn.secondary:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Últimos desaparecidos */
+#desaparecidos-home, #desaparecidos {
+  text-align: center;
+  background-color: #0077b6;
+}
+
+#desaparecidos-home h2 {
+  padding: 5px;
+  margin-bottom: 7px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Status nos cards */
+.status.missing {
+  color: #d90429;
+  font-weight: bold;
+}
+
+.status.found {
+  color: #2b9348;
+  font-weight: bold;
+}
+
+/* Hover cards */
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* Rodapé */
+footer {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 0px;
+}
+
+/* Conteúdo dinâmico */
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+/* Linha decorativa do título */
+.divider {
+  width: 60px;
+  height: 3px;
+  background-color: #0077b6;
+  margin: 10px auto 30px auto;
+  border-radius: 2px;
+}
+
+.card img {
+     height: 300px;
+}
+
+/* ===== MINI PERFIL (ícone de usuário) ===== */
+#mini-perfil {
+  position: relative;
+  display: none;
+  cursor: pointer;
+  margin-left: -10px;
+}
+
+#mini-perfil img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  object-fit: cover;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#mini-perfil img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* ===== MENU SUSPENSO DO PERFIL ===== */
+.menu-perfil {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translateX(-50%);
+  background-color: #000;
+  border-radius: 8px;
+  padding: 8px 0;
+  min-width: 150px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+  transform: translate(-50%, -10px);
+}
+
+/* Mostra com animação */
+#mini-perfil.ativo .menu-perfil {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.menu-perfil p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #000000;
+}
+
+/* Estilo dos botões dentro do menu */
+.menu-perfil button {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menu-perfil button:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Mostra o menu ao clicar */
+#mini-perfil.ativo .menu-perfil {
+  display: block;
+}
+
+/* Ajuste de alinhamento da navbar */
+#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#navbar li {
+  display: flex;
+  align-items: center;
+}
+
+
+/* ===== PERFIL DO USUÁRIO ===== */
+#perfil {
+  background-color: #0077b6;
+  color: #000;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#perfil h1 {
+  margin-bottom: 10px;
+}
+
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #eadbdb;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#foto-perfil {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  object-fit: cover;
+}
+
+.perfil-info p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+#btn-editar-perfil {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#btn-editar-perfil:hover {
+  background-color: #0077b6;
+  color: #ffffff;
+}
+
+/* ===== PERFIL - EDIÇÃO ===== */
+#form-editar-perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#form-editar-perfil input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#form-editar-perfil button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#form-editar-perfil button:hover {
+  background-color: #2b9348;
+}
+
+#form-editar-perfil #btn-cancelar-edicao:hover{
+  background-color: #d90429;
+  color: #ffffff;
+}
+
+#mensagem-perfil.sucesso {
+  color: #000000;
+}
+
+#mensagem-perfil.erro {
+  color: #d90429;
+}
+
+/* ===== FOTO DE PERFIL ===== */
+.foto-container {
+  position: relative;
+  display: inline-block;
+}
+
+#foto-perfil {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  object-fit: cover;
+}
+
+#btn-alterar-foto {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #0077b6;
+  color: #fff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid #fff;
+  transition: background-color 0.3s;
+}
+
+#btn-alterar-foto:hover {
+  background-color: #2b9348;
+}

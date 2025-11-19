@@ -1,0 +1,91 @@
+/* Filtros */
+
+h2 {
+    background-color: #0077b6;
+    color: #000;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.filtros input, .filtros select, .filtros button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+
+.filtros button {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filtros button:hover {
+    background-color: #2b9348;
+    color: #ffffff;
+}
+
+/* Cards - botões adicionais */
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn.small {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+/* Formulário de registro - campos iguais aos filtros */
+#form-desaparecido input,
+#form-desaparecido select,
+#form-desaparecido button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+    width: 140px; /* igual tamanho dos filtros */
+    box-sizing: border-box;
+}
+
+#form-desaparecido textarea {
+    width: 140px; /* deixa igual aos inputs */
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+#form-desaparecido button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#form-desaparecido button:hover {
+    background-color: #2b9348;
+    color: #fff;
+}
+
+/* Alinhamento do formulário igual aos filtros */
+#form-desaparecido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
